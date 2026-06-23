@@ -1,0 +1,10 @@
+{
+    "name": "Choice plays",
+    "short_name": "Choice plays",
+    "start_url": "./twende.html",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#00c8ff",
+    "orientation": "portrait",
+    "icon": [{"src": "icon.png","sizes": "512x512","type": "image/png"}]
+}

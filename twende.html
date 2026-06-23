@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHOICE-PLAYS</title>
+
+    <link rel="stylesheet" href="twende.css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#00c8ff">
+    <meta name="description" content="Choice plays is a multimedia entertainment
+    platform for audio, video, TV, sports and social media access">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <div class="logo">
+                <h2>CHOICE PLAYS 🤖</h2>
+            </div>
+
+            <button class="menu-btn active" id="audioBtn">
+                <i class="fas fa-music"></i>
+                 AUDIO DIRECT
+            </button>
+
+            <button class="menu-btn" id="videoBtn">
+                <i class="fas fa-film"></i>
+                VIDEO DIRECT
+            </button>
+
+            <button class="menu-btn" id="tvBtn">
+                <i class="fas fa-tv"></i>
+
+                 TELEVISION CHANNEL
+            </button>
+
+            <a href="http://www.fawanews.sc" target="_blank" rel="noopener noreferrer">
+             <button class="menu-btn" id="blBtn">
+                <i class="fas fa-tv"></i>
+
+                CHECK SPORTS
+            </button>
+            </a>
+
+            <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+
+            <button class="menu-btn" id="favoriteBtn"> 🧩 WHAT'SAPP</button> 
+
+            </a>
+
+             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+
+            <button class="menu-btn" id="favoriteBtn"> ❄ FACEBOOK</button>
+
+            </a>
+
+             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+
+            <button class="menu-btn" id="favoriteBtn"> 🧬 INSTAGRAM</button>
+
+            </a>
+
+            <button id="clearListBtn" class="clear-btn"> CLEAR PLAYLIST</button>
+
+            <div class="playlist-section">
+
+                <h3>Playlist</h3>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search file..."
+                >
+
+                <ul id="playlist"></ul>
+
+            </div>
+
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+
+
+            <div class="top-bar">
+
+                <h1 id="currentTitle">
+                    No media selected
+                </h1>
+                
+
+                <div class="browse-box">
+
+                    <input
+                        type="file"
+                        id="fileInput"
+                        multiple
+                        accept="audio/*,video/*"
+                    >
+
+                    <label for="fileInput" class="browse-btn">
+                        Browse Files
+                    </label>
+                    
+
+                </div>
+
+            </div>
+
+            <!-- AUDIO PLAYER -->
+            <div id="audioSection">
+
+                <audio id="audioPlayer"controls></audio>
+
+            </div>
+
+            <!-- VIDEO PLAYER -->
+            <div id="videoSection" style="display:none;">
+
+                <video id="videoPlayer" controls></video>
+
+            </div>
+
+            <!--tv section-->
+            <div id="tvSection" style="display: none; width: 100%; height: 100%;">
+                <iframe id="tvFrame" src="" width="100%" height="600" frameborder="0"></iframe>
+            </div>
+
+
+
+            
+
+            <!-- CONTROLS -->
+            <div class="controls">
+                <a href="https://wa.me/255698924897" target="_blank" rel="noopener noreferrer"  onclick="return confirmPassword()">
+                  <button class="menu-btn" id="favoriteBtn"><b>SAP</b></button> 
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100088729887191" target="_blank" rel="noopener noreferrer" onclick="return confirmPassword()">
+                  <button class="menu-btn" id="favoriteBtn"><b>FB</b></button> 
+                </a>
+                <a href="https://www.instagram.com/_sampe_tz/" target="_blank" rel="noopener noreferrer"  onclick="return confirmPassword()">
+                  <button class="menu-btn" id="favoriteBtn"><b>IG</b></button> 
+                </a>
+
+                <button id="prevBtn"> ⏮ </button>
+
+                <button id="playPauseBtn">▶</button>
+
+                <button id="nextBtn"> ⏭</button>
+
+                <button id="repeatBtn">🔁</button>
+
+                <button id="shuffleBtn">🔀</button>
+                
+
+
+
+            </div>
+
+
+            <div class="volume-box">
+
+                <span>
+                    <i class="fas fa-volume-up">V O L U M E</i>
+                </span>
+
+                <input type="range" min="0" max="1" step="0.1" value="1" id="volumeSlider">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="twende.js"></script>
+
+</body>
+</html>
